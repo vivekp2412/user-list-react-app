@@ -1,14 +1,18 @@
 // import React from 'react';
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import "./Usercard.css";
 function Usercard() {
+  const data = useSelector((state)=>state.data);
+  const [show,setShow]=useState();
   return (
     <div className="userCard">
       <div className="user-card-image">
-        <img src="https://reqres.in/img/faces/2-image.jpg" alt="" />
+        <img src={data.avatar} alt="" />
       </div>
-      <div className="user-name">Emma W0ng</div>
-      <div className="user-email">emma.wong2gmail.com</div>
-      <div className="user-plan">Your Plan:Standard</div>
+      <div className="user-name">{data.first_name} {data.last_name}</div>
+      <div className="user-email">{data.email}</div>
+      <div className="user-plan">Your Plan: Standard</div>
       <div className="active-button">
         <div className="activebutton">Active Users</div>
       </div>

@@ -2,9 +2,25 @@ import "./Displaytable.css";
 import Lock from "../../assets/lock-9c674c88.svg";
 import Trash from "../../assets/trash.svg";
 import { DummyData } from "../../store/DummyData";
-
+import { showCard } from "../../store/DummyData";
+import { useDispatch } from "react-redux";
+interface DummyDataInter {
+  _id: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  avatar: string;
+  active: boolean;
+  owner: boolean;
+  role: string;
+  removable: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
 function Displaytable() {
-console.log(DummyData)
+// console.log(DummyData)
+const dispatch = useDispatch();
   return (
     <div className="displayTable">
       <table>
@@ -17,11 +33,11 @@ console.log(DummyData)
           </tr>
         </thead>
         <tbody>
-          {DummyData.map((data,index)=>{
+          {DummyData.map((data:DummyDataInter,index:number)=>{
             if(index==0){
               return(
                 <tr>
-                <td className="user-details">
+                <td className="user-details" onClick={()=>dispatch(showCard(data._id))}>
                   <span className="user-image">
                     <img
                       className="user-image"aria-activedescendant=""
@@ -47,7 +63,7 @@ console.log(DummyData)
             }
             return(
               <tr>
-              <td className="user-details">
+              <td className="user-details" onMouseOver={()=>dispatch(showCard(data._id))}>
                 <span className="user-image">
                   <img
                     className="user-image"aria-activedescendant=""

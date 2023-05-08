@@ -1,3 +1,9 @@
+
+import { createSlice } from "@reduxjs/toolkit";
+
+// import {createSlice } from "@reduxjs/toolkit";
+
+
 interface DummyDataInter {
   _id: string;
   email: string;
@@ -13,7 +19,7 @@ interface DummyDataInter {
   __v: number;
 }
 
-export const DummyData: DummyDataInter[] = [
+ export const DummyData: DummyDataInter[] = [
   {
     _id: "641c3407f8c26a9cb62a4c8e",
     first_name: "Charles",
@@ -155,3 +161,29 @@ export const DummyData: DummyDataInter[] = [
     __v: 0,
   },
 ];
+const initialState={
+   data:{}
+}
+const user = createSlice({
+  name:"user-data",
+  initialState,
+  reducers:{
+       showCard(state,action){
+        console.log("hh");
+         DummyData.map((userdata)=>{
+          if(userdata._id==action.payload){
+            state.data=userdata;
+            console.log(state.data);
+            
+          }
+         })
+        //  console.log(state);
+         
+       }
+      
+        
+
+  }
+})
+export const {showCard} = user.actions;
+export default user.reducer;
