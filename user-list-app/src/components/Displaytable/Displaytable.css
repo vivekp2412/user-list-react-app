@@ -68,6 +68,8 @@ td {
 .user-name {
   font-weight: 500;
   font-size: 0.9rem;
+  display: flex;
+  gap: 0.5em;
 }
 .user-email {
   color: #6b7280;

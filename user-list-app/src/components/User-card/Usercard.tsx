@@ -11,13 +11,15 @@ interface DummyDataInter {
   role: string;
   removable: string;
   createdAt: string;
-  updatedAt: string;
   __v: number;
 }
 
 interface State {
   data: DummyDataInter;
-  showcard: boolean;
+  showcard: false;
+  pageData: [];
+  pending: false;
+  error: "";
 }
 function Usercard() {
   let data = useSelector((state: State) => state.data);
@@ -27,7 +29,7 @@ function Usercard() {
       <div className="user-card-image">
         <img src={data.avatar} alt="" />
       </div>
-      <div className="user-name">
+      <div className="user-name user-name-card">
         {data.first_name} {data.last_name}
       </div>
       <div className="user-email">{data.email}</div>
