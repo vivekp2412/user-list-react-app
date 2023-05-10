@@ -1,16 +1,35 @@
-// import React from 'react';
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import "./Usercard.css";
+interface DummyDataInter {
+  _id: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  avatar: string;
+  active: boolean;
+  owner: boolean;
+  role: string;
+  removable: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+
+interface State {
+  data: DummyDataInter;
+  showcard: boolean;
+}
 function Usercard() {
-  const data = useSelector((state)=>state.data);
-  const [show,setShow]=useState();
+  let data = useSelector((state: State) => state.data);
+  let showCard = useSelector((state: State) => state.showcard);
   return (
-    <div className="userCard">
+    <div className={showCard ? "userCard show" : "userCard hidden"}>
       <div className="user-card-image">
         <img src={data.avatar} alt="" />
       </div>
-      <div className="user-name">{data.first_name} {data.last_name}</div>
+      <div className="user-name">
+        {data.first_name} {data.last_name}
+      </div>
       <div className="user-email">{data.email}</div>
       <div className="user-plan">Your Plan: Standard</div>
       <div className="active-button">

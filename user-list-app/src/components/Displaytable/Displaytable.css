@@ -1,84 +1,83 @@
-.displayTable{
-overflow: auto;  }
-  table{
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  td{
-    padding-bottom: 2rem;
-  }
-  .table-head{
-    /* border: 2px solid black; */
-    margin: 4rem 0;
-  }
-  .table-heading-text{
-    font-size: 1.3rem;
-    text-align: start;
-    padding-bottom: 2rem;
-  }
-  .name-heading{
-   width: 50%;
-  }
-  .status-heading{
-    width: 22%;
-  }
-  .access-heading{
-    width: 22%;
-  }
-  .icon-heading{
-    width: 7%;
-  }
-  /* Table data */
-  .user-details{
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-  }
-  .user-image{
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-  }
-  .user-name-email{
-    display: flex;
-    flex-direction: column;
-  }
-  .status-dropmenu{
-    border-radius: 6px;
-    background-color: #f9fafb;
-    padding: 0.625rem 1rem 0.625rem 0.625rem;
-    font-size: .9rem;
-    line-height: 1.25rem;
-    border: none;
-    border-right: 13px solid transparent;
-    outline: 1px solid #D1D5DB;
-    width: 70%;
-  }
+.displayTable {
+  overflow: auto;
+}
+table {
+  width: 100%;
+}
+td {
+  padding-bottom: 2rem;
+}
+.table-head {
+  margin: 4rem 0;
+}
+.table-heading-text {
+  font-size: 1.3rem;
+  text-align: start;
+  padding-bottom: 2rem;
+}
+.name-heading {
+  width: 50%;
+}
+.status-heading {
+  width: 22%;
+}
+.access-heading {
+  width: 22%;
+}
+.icon-heading {
+  width: 7%;
+}
+/* Table data */
+.user-details {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.user-name-email {
+  display: flex;
+  flex-direction: column;
+}
+.status-dropmenu {
+  border-radius: 6px;
+  background-color: #f9fafb;
+  padding: 0.625rem 1rem 0.625rem 0.625rem;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  border: none;
+  border-right: 13px solid transparent;
+  outline: 1px solid #d1d5db;
+  width: 70%;
+}
 
-  .access-dropmenu{
-    border-radius: 6px;
-    background-color: #f9fafb;
-    padding: 0.625rem 1rem 0.625rem 0.625rem;
-    font-size: .9rem;
-    line-height: 1.25rem;
-    border: none;
-    border-right: 13px solid transparent;
-    outline: 1px solid #D1D5DB;
-    width: 70%;
-  }
-  .user-name{
-    font-weight: 500;
-    font-size: .9rem;
-  }
-  .user-email{
-    color: #6b7280;
-    font-size: .9rem;
-  }
-  .status-details{
-    color: #15803d;
-    font-weight: 600;
-  }
-.access-details{
-    color: #6b7280;
-    font-weight: 600;
+.access-dropmenu {
+  border-radius: 6px;
+  background-color: #f9fafb;
+  padding: 0.625rem 1rem 0.625rem 0.625rem;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  border: none;
+  border-right: 13px solid transparent;
+  outline: 1px solid #d1d5db;
+  width: 70%;
+}
+.user-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.user-email {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+.status-details {
+  color: #15803d;
+  font-weight: 600;
+}
+.access-details {
+  color: #6b7280;
+  font-weight: 600;
 }
