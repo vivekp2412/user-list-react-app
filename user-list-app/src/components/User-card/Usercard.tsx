@@ -27,7 +27,7 @@ function Usercard() {
       <div className="user-card-image">
         <img src={data.avatar} alt="" />
       </div>
-      <div className="user-name">
+      <div className="user-name user-status">
         {data.first_name} {data.last_name}
       </div>
       <div className="user-email">{data.email}</div>
@@ -50,6 +50,7 @@ function Usercard() {
           <div className="clicks-value">2496</div>
           <div className="clicks-details-text">Clicks Reviewed</div>
         </div>
+
         <div className="monthly-clicks">
           <div className="clicks-reviewed">
             <div className="clicks-value">2496</div>

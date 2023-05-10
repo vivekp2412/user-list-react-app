@@ -30,6 +30,17 @@
   font-size: 1.3rem;
   font-weight: 500;
 }
+.user-status {
+  position: relative;
+}
+.user-status::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+}
 .user-email {
   font-size: 0.9rem;
   opacity: 0.7;
@@ -97,4 +108,7 @@ progress::-webkit-progress-value {
 }
 .show {
   display: flex;
+}
+.line {
+  background-color: #feb23e;
 }
