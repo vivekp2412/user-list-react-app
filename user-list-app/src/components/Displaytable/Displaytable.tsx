@@ -35,7 +35,7 @@ function Displaytable() {
           {DummyData.map((data: DummyDataInter, index: number) => {
             if (index == 0) {
               return (
-                <tr>
+                <tr key={index}>
                   <td
                     className="user-details"
                     onMouseOver={() => dispatch(showCard(data._id))}
@@ -64,7 +64,7 @@ function Displaytable() {
               );
             }
             return (
-              <tr>
+              <tr key={index}>
                 <td
                   className="user-details"
                   onMouseOver={() => dispatch(showCard(data._id))}
