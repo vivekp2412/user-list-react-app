@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface DummyDataInter {
   _id: string;
@@ -157,6 +157,7 @@ export const DummyData: DummyDataInter[] = [
     __v: 0,
   },
 ];
+
 const initialState = {
   data: {},
   showcard: false,
@@ -165,10 +166,10 @@ const user = createSlice({
   name: "user-data",
   initialState,
   reducers: {
-    showCard(state, action) {
+    showCard(state, action: PayloadAction<string>) {
       state.showcard = true;
       DummyData.map((userdata) => {
-        if (userdata._id == action.payload) {
+        if (userdata._id === action.payload) {
           state.data = userdata;
         }
       });

@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+
 import "./Usercard.css";
 interface DummyDataInter {
   _id: string;
@@ -20,10 +22,35 @@ interface State {
   showcard: boolean;
 }
 function Usercard() {
+  const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    const handleMouseEvent = (Event: MouseEvent) => {
+      if (window.innerWidth < 700) {
+        setCoordinates({ x: Event.clientX - 550, y: Event.clientY });
+        console.log(Event.clientX);
+      } else {
+        setCoordinates({ x: 0, y: 0 });
+      }
+    };
+    window.addEventListener("mousemove", handleMouseEvent);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseEvent);
+    };
+  }, []);
+
   let data = useSelector((state: State) => state.data);
-  let showCard = useSelector((state: State) => state.showcard);
+  let showcardState = useSelector((state: State) => state.showcard);
+
   return (
-    <div className={showCard ? "userCard show" : "userCard hidden"}>
+    <div
+      id="Card"
+      className={showcardState ? "userCard show" : "userCard hidden"}
+      style={
+        coordinates.x !== 0
+          ? { position: "absolute", left: coordinates.x, top: coordinates.y }
+          : {}
+      }
+    >
       <div className="user-card-image">
         <img src={data.avatar} alt="" />
       </div>
@@ -37,7 +64,7 @@ function Usercard() {
       </div>
       <div className="plan-progressbar">
         <div>
-          <p>Plan Uses </p>
+          <p className="plan-uses-text">Plan Uses </p>
         </div>
         <progress
           className="user-card-progressbar"
@@ -47,13 +74,13 @@ function Usercard() {
       </div>
       <div className="click-details">
         <div className="clicks-reviewed">
-          <div className="clicks-value">2496</div>
+          <div className="clicks-value">2450</div>
           <div className="clicks-details-text">Clicks Reviewed</div>
         </div>
-
+        <div className="seperation-line"></div>
         <div className="monthly-clicks">
           <div className="clicks-reviewed">
-            <div className="clicks-value">2496</div>
+            <div className="clicks-value">5000</div>
             <div className="clicks-details-text">Monthly clicks</div>
           </div>
         </div>

@@ -1,8 +1,8 @@
 import "./Displaytable.css";
 import Lock from "../../assets/lock-9c674c88.svg";
 import Trash from "../../assets/trash.svg";
-import { DummyData } from "../../store/Dataslice";
-import { showCard, hideCard } from "../../store/Dataslice";
+import { DummyData } from "../../slices/Dataslice";
+import { showCard, hideCard } from "../../slices/Dataslice";
 import { useDispatch } from "react-redux";
 interface DummyDataInter {
   _id: string;

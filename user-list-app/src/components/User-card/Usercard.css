@@ -38,6 +38,8 @@
   position: absolute;
   width: 10px;
   height: 10px;
+  top: -5px;
+  right: -15px;
   border-radius: 50%;
   background-color: green;
 }
@@ -60,7 +62,7 @@
   margin-bottom: 0.4rem;
 }
 .plan-progressbar {
-  width: 80%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -76,7 +78,6 @@ progress {
 }
 progress::-webkit-progress-bar {
   background-color: #fff5e4;
-  /* opacity: .7; */
 }
 progress::-webkit-progress-value {
   background-color: #feb23e;
@@ -87,7 +88,7 @@ progress::-webkit-progress-value {
 }
 .click-details {
   display: flex;
-  gap: 2.8rem;
+  gap: 2rem;
 }
 .clicks-reviewed {
   display: flex;
@@ -95,7 +96,7 @@ progress::-webkit-progress-value {
   gap: 10px;
 }
 .clicks-value {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 .clicks-details-text {
@@ -109,6 +110,10 @@ progress::-webkit-progress-value {
 .show {
   display: flex;
 }
-.line {
-  background-color: #feb23e;
+.seperation-line {
+  border: 0.5px solid #d8dce3;
+  border-radius: 14%;
+}
+.plan-uses-text {
+  font-size: 1.2rem;
 }

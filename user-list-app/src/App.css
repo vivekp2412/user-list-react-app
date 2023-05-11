@@ -3,7 +3,7 @@
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
-.table-container {
+.table-card-container {
   background-color: white;
   margin: 3rem;
 }
@@ -21,10 +21,27 @@
   position: relative;
   justify-content: end;
   flex: 1;
-  /* background-color: aquamarine; */
 }
 .sidestrip {
   background-color: #d8dce3;
   width: 6rem;
   height: 100%;
+}
+@media screen and (max-width: 1100px) {
+  .main-content {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .user-table {
+    width: 99%;
+  }
+  .sidestrip {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .user-table {
+    width: 99%;
+  }
 }
