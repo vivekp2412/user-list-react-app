@@ -25,7 +25,7 @@ interface Statetype {
   pending: boolean;
   error: string;
 }
-
+//Display Table
 function Displaytable() {
   const dispatch = useDispatch();
   let DummyData = useSelector((state: Statetype) => state.pageData);
@@ -34,6 +34,7 @@ function Displaytable() {
     <>
       <div className="displayTable">
         {ispending ? (
+          //Skeleton Made for Pending state
           <SkeletonCard />
         ) : (
           <table>
@@ -49,7 +50,7 @@ function Displaytable() {
               {DummyData.map((data: DummyDataInter, index: number) => {
                 if (index == 0) {
                   return (
-                    <tr>
+                    <tr key={data._id + index}>
                       <td
                         className="user-details"
                         onMouseOver={() => dispatch(showCard(data._id))}
@@ -78,7 +79,7 @@ function Displaytable() {
                   );
                 }
                 return (
-                  <tr>
+                  <tr key={data._id + index}>
                     <td
                       className="user-details"
                       onMouseOver={() => dispatch(showCard(data._id))}

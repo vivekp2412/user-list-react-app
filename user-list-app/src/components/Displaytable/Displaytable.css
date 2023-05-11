@@ -5,7 +5,7 @@ table {
   width: 100%;
 }
 td {
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .table-head {
   margin: 4rem 0;
@@ -52,6 +52,7 @@ td {
   border-right: 13px solid transparent;
   outline: 1px solid #d1d5db;
   width: 70%;
+  min-width: 100px;
 }
 
 .access-dropmenu {
@@ -64,6 +65,7 @@ td {
   border-right: 13px solid transparent;
   outline: 1px solid #d1d5db;
   width: 70%;
+  min-width: 100px;
 }
 .user-name {
   font-weight: 500;
@@ -82,4 +84,29 @@ td {
 .access-details {
   color: #6b7280;
   font-weight: 600;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 255, 255, 0.3);
+}
+@media screen and (max-width: 650px) {
+  .status-dropmenu {
+    margin: 0 8px;
+  }
 }

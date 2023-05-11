@@ -1,6 +1,7 @@
 import "../components/Displaytable/Displaytable.css";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+//Skeleton Component for pending state
 function SkeletonCard() {
   return (
     <div>
@@ -19,7 +20,7 @@ function SkeletonCard() {
             .fill(8)
             .map((index: number) => {
               return (
-                <tr>
+                <tr key={index + Math.random()}>
                   <td className="user-details">
                     <span className="user-image">
                       <Skeleton height={40} width={40} />

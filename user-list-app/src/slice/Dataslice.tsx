@@ -1,11 +1,5 @@
-import {
-  Action,
-  AnyAction,
-  createAsyncThunk,
-  createSlice,
-} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { Users } from "react-feather";
 
 interface DummyDataInter {
   _id: string;
@@ -34,7 +28,7 @@ const initialState = {
   pending: false,
   error: "",
 };
-
+//Fetching data from api
 export const getUser = createAsyncThunk("getusers", async (pageid: number) => {
   try {
     const data = await axios.get(
@@ -46,7 +40,7 @@ export const getUser = createAsyncThunk("getusers", async (pageid: number) => {
     return "Error Occured";
   }
 });
-
+//User Slice
 const user = createSlice({
   name: "user-data",
   initialState,

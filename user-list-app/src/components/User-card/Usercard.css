@@ -7,7 +7,7 @@
   position: absolute;
   width: 300px;
   background-color: #fff;
-  top: 21%;
+  top: 15%;
   border-radius: 2.8rem;
   box-shadow: 0 24px 107px -36px #00000054;
   padding: 2.2rem;
@@ -72,7 +72,6 @@ progress {
 }
 progress::-webkit-progress-bar {
   background-color: #fff5e4;
-  /* opacity: .7; */
 }
 progress::-webkit-progress-value {
   background-color: #feb23e;
