@@ -18,6 +18,7 @@ interface DummyDataInter {
   updatedAt: string;
   __v: number;
 }
+// Display table
 function Displaytable() {
   const dispatch = useDispatch();
   return (

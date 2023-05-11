@@ -14,7 +14,7 @@ interface DummyDataInter {
   updatedAt: string;
   __v: number;
 }
-
+//Dummy Data
 export const DummyData: DummyDataInter[] = [
   {
     _id: "641c3407f8c26a9cb62a4c8e",
@@ -157,15 +157,17 @@ export const DummyData: DummyDataInter[] = [
     __v: 0,
   },
 ];
-
+//initial State
 const initialState = {
   data: {},
   showcard: false,
 };
+//Data Slice
 const user = createSlice({
   name: "user-data",
   initialState,
   reducers: {
+    // Show Card
     showCard(state, action: PayloadAction<string>) {
       state.showcard = true;
       DummyData.map((userdata) => {
@@ -174,6 +176,7 @@ const user = createSlice({
         }
       });
     },
+    //hide Card
     hideCard(state) {
       state.showcard = false;
     },

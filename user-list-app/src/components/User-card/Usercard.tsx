@@ -21,13 +21,14 @@ interface State {
   data: DummyDataInter;
   showcard: boolean;
 }
+// User Card Details
 function Usercard() {
+  //user card floating with Cursor
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const handleMouseEvent = (Event: MouseEvent) => {
       if (window.innerWidth < 700) {
         setCoordinates({ x: Event.clientX - 550, y: Event.clientY });
-        console.log(Event.clientX);
       } else {
         setCoordinates({ x: 0, y: 0 });
       }
