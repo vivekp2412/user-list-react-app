@@ -2,7 +2,7 @@ import "../components/Displaytable/Displaytable.css";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 //Skeleton Component for pending state
-function SkeletonCard() {
+function SkeletonCard(): JSX.Element {
   return (
     <div>
       <table>

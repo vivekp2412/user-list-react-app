@@ -5,7 +5,7 @@ import { useAppDispatch } from "../../Hooks/Hooks";
 import { getUser } from "../../slice/Dataslice";
 import style from "./Paginate.module.css";
 // Pagination  UI
-const Pagination = () => {
+const Pagination = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const handlePageClick = (data: { selected: number }) => {
     dispatch(getUser(data.selected + 1));

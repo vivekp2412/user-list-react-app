@@ -5,7 +5,7 @@ import Displaytable from "./Displaytable/Displaytable";
 import Pagination from "./Paginate/Pagination";
 import Usercard from "./User-card/Usercard";
 //Container Containing All the Components
-function Container() {
+function Container(): JSX.Element {
   return (
     <div className="table-container">
       <div className="main-content">

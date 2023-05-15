@@ -26,7 +26,7 @@ interface Statetype {
   error: string;
 }
 //Display Table
-function Displaytable() {
+function Displaytable(): JSX.Element {
   const dispatch = useDispatch();
   let DummyData = useSelector((state: Statetype) => state.pageData);
   let ispending = useSelector((state: Statetype) => state.pending);

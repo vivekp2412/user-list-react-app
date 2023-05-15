@@ -24,7 +24,7 @@ interface State {
   error: "";
 }
 // User Card Component
-function Usercard() {
+function Usercard(): JSX.Element {
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const handleMouseEvent = (Event: MouseEvent) => {
