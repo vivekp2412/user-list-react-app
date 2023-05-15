@@ -22,7 +22,7 @@ interface State {
   showcard: boolean;
 }
 // User Card Details
-function Usercard() {
+function Usercard(): JSX.Element {
   //user card floating with Cursor
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   useEffect(() => {

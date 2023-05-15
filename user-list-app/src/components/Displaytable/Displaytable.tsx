@@ -19,7 +19,7 @@ interface DummyDataInter {
   __v: number;
 }
 // Display table
-function Displaytable() {
+function Displaytable(): JSX.Element {
   const dispatch = useDispatch();
   return (
     <div className="displayTable">

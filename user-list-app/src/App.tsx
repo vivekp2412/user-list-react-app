@@ -1,7 +1,7 @@
 import "./App.css";
 import Container from "./components/Container";
 
-function App() {
+function App(): JSX.Element {
   return (
     <>
       <Container />

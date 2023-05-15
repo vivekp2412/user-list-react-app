@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "../App.css";
 import Displaytable from "./Displaytable/Displaytable";
 import Usercard from "./User-card/Usercard";
-function Container() {
+function Container(): JSX.Element {
   //Container Containing All the element
   return (
     <div className="table-card-container">
